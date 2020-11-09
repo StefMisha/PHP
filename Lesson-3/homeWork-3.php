@@ -43,9 +43,9 @@ $reg = [
      
 foreach ($reg as $obl => $gor) {
     if (is_array($gor['Город'])) {
-        $p = implode(", ", $gor['Город']);
+        $p = implode (", ", $gor['Город']);/*фун котороая переводит в строку массив с ,*/
     } else {
-        $p = $gor['Город'];
+        $p = $gor['Город'];//лишнее
     }
        echo "<br>$obl: <br> $p. ";
 }
@@ -55,7 +55,15 @@ foreach ($reg as $obl => $gor) {
 
 <?
 echo "Задание №4 <br>";
-$arr = ["а" => "a","б" => "b","в" => "v","г" => "g","д" => "d","е" => "e","ё" => "yo","ж" => "j","з" => "z"];
+$arr = ["а" => "a",
+"б" => "b",
+"в" => "v",
+"г" => "g",
+"д" => "d",
+"е" => "e",
+"ё" => "yo",
+"ж" => "j",
+"з" => "z"];
 function trans($ru, $tr, $arr) {
     if ($pow > 1) { 
         return $val * power($val, $pow - 1);

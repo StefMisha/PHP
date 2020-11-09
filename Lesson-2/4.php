@@ -19,7 +19,7 @@ function mathOperation($arg1, $arg2, $operation)
 
 function add($arg1, $arg2)
 {
-    return "Сумма $arg1 + $arg2 = " . $arg1 = $arg1 + $arg2;
+    return "Сумма $arg1 + $arg2 = " . $arg1 = $arg1 + $arg2; //оставить только переменные во всех функ
 }
 
 function mul($arg1, $arg2)
