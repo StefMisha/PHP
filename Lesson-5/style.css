@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+	
+}
+.title h2 {
+	font: normal 2em Arial,sans-serif;
+	margin: 100px 0 20px 0;
+	padding: 0;
+	text-align: center;
+}
+a.photo{
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+#content {
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	margin:0 auto;
+	max-width: 700px;
+    padding: 10px 20px;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+	border-radius: 10px;
+	
+}
+.gallery {
+	height: 100%;
+}
+.gallery img{
+	width: 200px;
+	max-height: 200px;
+	margin:5px;
+	border:3px solid #fff;
+	float: left;
+}
