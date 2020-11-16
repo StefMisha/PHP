@@ -2,12 +2,15 @@
 if (empty($_GET)) {
     return 'Ничего не передано!';
 }
+if (empty($_GET['operation'])) {
+    return 'Не передана операция';
+}
 
-
-if (empty(($_GET['a']) || empty($_GET['b']) || ($_GET['operetion'] != '*' || $_GET['operetion'] != '-' || $_GET['operetion'] != '+'))) {
-    return 'Не переданы аргументы';
-} elseif () { //проверку делать по числу, и провписать передачу именно чисел в index, потом проверка, если не равно 0
-    # code...
+if (empty($_GET['a']) || empty($_GET['b'])) {
+    if (empty($_GET['operation'] == '/')) {
+        return 'Не переданы все аргументы';
+    }
+    return 'Деление на 0';
 }
 
 
@@ -30,7 +33,7 @@ switch ($_GET['operation']) {
         if ($a == 0 || $b == 0) {
             return "Деление на 0";
         } else {
-            return $result = $a / $b;;
+            $result = $a / $b;;
         }
         break;
     default:
@@ -38,3 +41,5 @@ switch ($_GET['operation']) {
 }
 
 return $expression . $result;
+
+echo '<br><a href="' . $_SERVER['HTTP_REFERER'] . '" >Ссылка</a><br />';

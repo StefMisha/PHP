@@ -18,8 +18,14 @@
         </select>
         <input type="text" name="b">
         <input type="submit" value="Посчитать">
+        <hr>
 
     </form>
 </body>
+<?
+
+echo '<br><a href="' . $_SERVER['HTTP_REFERER'] . '" >Ссылка</a><br />'; 
+
+?>
 
 </html>
