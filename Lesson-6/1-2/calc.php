@@ -30,10 +30,14 @@ switch ($_GET['operation']) {
         $result = $a * $b;
         break;
     case '/':
-        if ($a == 0 || $b == 0) {
-            return "Деление на 0";
-        } else {
-            $result = $a / $b;;
+        $result = $a / $b;;
+        break;
+    case '^':
+        // $result = $a ** $b;
+
+        $result = 1;
+        for ($i = 0; $i < $b; $i++) {
+            $result *= $a;
         }
         break;
     default:
@@ -42,4 +46,4 @@ switch ($_GET['operation']) {
 
 return $expression . $result;
 
-echo '<br><a href="' . $_SERVER['HTTP_REFERER'] . '" >Ссылка</a><br />';
+echo '<br><a href="' . $_SERVER['HTTP_REFERER'] . '" >Назад</a><br />';
